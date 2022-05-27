@@ -1,0 +1,8 @@
+name: Reclaim
+author: Piggyster
+version: 1.1
+api-version: 1.17
+main: me.piggyster.reclaim.ReclaimPlugin
+depend: [PiggyAPI]
+commands:
+  reclaim: {}

@@ -1,0 +1,75 @@
+database:
+  type: H2 #options: H2 & MySQL
+  credentials: #only for MySQL
+    host: localhost
+    port: 8080
+    database: reclaim_storage
+    username: username
+    password: ''
+
+sounds:
+  reminder:
+    name: ENTITY_VILLAGER_YES
+    volume: 1.5
+    pitch: 1.5
+
+settings:
+  remind_on_join: true
+  status:
+    LOCKED: "&c&lLOCKED"
+    UNLOCKED: "&a&lAVAILABLE"
+    USED: "&e&lALREADY USED"
+
+messages:
+  reminder: "&b&lRECLAIM &f| &7You have available rewards @ &e&n/reclaim"
+  claimed: "&b&lRECLAIM &f| &7You have redeemed %color%%reclaim% Reclaim&7!"
+
+
+menu:
+  title: "&nRank Reclaim"
+  size: 27
+  items:
+    spacer:
+      material: BLACK_STAINED_GLASS_PANE
+    reclaim:
+      name: "%color%&l%name% Reclaim"
+      lore:
+        - ""
+        - "%elements%"
+        - ""
+        - "%status%"
+      element: "%color%&l * &7%amount%x %altcolor%&l%reward%"
+    not_available:
+      material: RED_STAINED_GLASS_PANE
+      name: "&c&l%category% Reclaims"
+      lore:
+        - ""
+        - "&7You currently have this reclaim locked."
+        - "&7Purchase ranks & reclaims @ &nstore.fadecloud.com"
+    already_used_temp:
+      material: BARRIER
+      name: "&c&lYou already used that reclaim!"
+      duration: 40
+    not_available_temp:
+      material: BARRIER
+      name: "&c&lYou do not own this reclaim!"
+      duration: 40
+
+reclaims:
+  rank:
+    slot: 13
+    'Dragon':
+      item:
+        material: PLAYER_HEAD
+        texture: 'http://textures.minecraft.net/texture/c494a30a2799ebfbc8ad776b9387f3e9d1799bba8900013ac992db1fbad41ce7'
+      weight: 10
+      color: "<#eb4034>"
+      alt_color: "<#ff5757>"
+      rewards:
+        - "$200,000"
+        - "30,000 EXP"
+      commands:
+        - "bank give %player% money 200000"
+        - "eexp give %player% 30000"
+
+
