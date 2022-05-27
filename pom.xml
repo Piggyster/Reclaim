@@ -36,7 +36,7 @@
             <artifactId>PiggyAPI</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>D:/Piggy Client/PiggyAPI/target/PiggyAPI-1.0.0-SNAPSHOT.jar</systemPath>
+            <systemPath>lib/PiggyAPI.jar</systemPath>
         </dependency>
     </dependencies>
 
